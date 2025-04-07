@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/fb12fee275.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,7 @@
     <link rel="icon" type="/favicon.ico" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="/favicon.ico" sizes="16x16" href="/favicon-16x16.png">
     <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0", maximum-scale=1.0, minimum-scale=1.0>
     <title>Agencia Babel</title>
 </head>
 <body>
@@ -18,6 +20,12 @@
         <header>
             <div class="header_container">
                 <p><img src="img/babel_logo.png" alt="Agencia Babel" class="logo"> Agencia Babel</p>
+
+                <div class="menu_toggle" aria-label="Abrir menú" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
                 <nav class="menu">
                     <ul class="menu_items">
@@ -57,26 +65,35 @@
        <section class="servicios">
             <h2>Nuestros servicios</h2>
             
-            <div class="vertical_cards_container">
-                <div class="vertical_card">
-                    <img src="img/img1.jpg" alt="Branding">
-                    <h3>Branding y Marca Personal</h3>
-                    <p>Explorar ⭢</p>
+            <!-- Swiper Markup -->
+            <div class="swiper insight-carousel">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide vertical_card">
+                      <img src="/img/img1.jpg" alt="Asesoría">
+                      <h2>Asesoría</h2>
+                      <p>Sesiones 1:1 con profesionales del área.</p>
+                    </div>
+                    <div class="swiper-slide vertical_card">
+                      <img src="/img/img2.jpg" alt="Diseño">
+                      <h2>Diseño</h2>
+                      <p>Planes de identidad visual para tu proyecto.</p>
+                    </div>
+                    <div class="swiper-slide vertical_card">
+                      <img src="/img/img3.jpg" alt="Gestión">
+                      <h2>Gestión</h2>
+                      <p>Acompañamiento integral de tu equipo creativo.</p>
+                    </div>
                 </div>
-
-                <div class="vertical_card">
-                    <img src="img/img2.jpg" alt="Diseño web">
-                    <h3>Diseño  y Programación web</h3>
-                    <p>Explorar ⭢</p>
-                </div>
-
-                <div class="vertical_card">
-                    <img src="img/img3.jpg" alt="Social media">
-                    <h3>Redes Sociales</h3>
-                    <p>Explorar ⭢</p>
-                </div>
-            </div>
-        </section>
+                
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>                                                  
+    </section>
 
         <div class="middle_banner">
             <img class="banner" src="img/portada2.webp" alt="Banner">
@@ -152,5 +169,7 @@
             <h4> Agencia Babel &copy 2024-2025</h4>
         </div>
     </footer>
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
