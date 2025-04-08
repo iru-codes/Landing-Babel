@@ -430,6 +430,7 @@ section{
 .swiper-wrapper{
     display: flex;
     gap: 20px;
+    margin: 10px;
 }
 
 .vertical_card {
@@ -440,6 +441,7 @@ section{
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 10px;
+    gap: 5px;
     text-align: center;
     transition: transform 0.5s;
     box-sizing: border-box;
@@ -537,14 +539,15 @@ section{
     position: absolute;
     text-align: right;
     padding: 20px;
-    top: 20%;
+    top: 10%;
     gap: 40px;
     border-radius: 8px;
     color: white;
-    width: 85%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    right: 10%;
 }
 
 .text_container h2 {
@@ -554,7 +557,7 @@ section{
 
 .text_container p {
     font-size: 1.2rem;
-    width: 35%;
+    width: 70%;
 }
 
 .btn {
@@ -574,9 +577,12 @@ section{
 }
 
 @media (max-width: 768px) {
-    .middele_banner {
+    .middle_banner {
         width: 100%;
         margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
     .middle_banner img {
@@ -584,31 +590,27 @@ section{
     }
 
     .text_container {
-        padding: 10px;
-        width: 100%;
+        position: static;
+        width: 90%;
+        align-items: center;
+        gap: 10px;
     }
 
     .text_container h2 {
-        font-size: 2rem;
-        width: 50%;
-        right: 15px;
-        text-align: right;
-    }
-
-    .text_container p, .text_container .btn {
-        font-size: 1rem;
-        position: relative;
-        top: 150px;
+        font-size: 1.5rem;
+        width: 100%;
         text-align: center;
+        margin-top: 20px;
     }
 
     .text_container p {
+        font-size: 1rem;
         width: 100%;
+        text-align: center;
     }
 
     .text_container .btn {
-        margin-top: 0;
-        right: 37%;
+        margin-top: 10px;
     }
 }
 
@@ -650,10 +652,6 @@ section{
 }
 
 @media (max-width: 768px) {
-    .horizontal_cards{
-        margin-top: 35%;
-    }
-
     .horizontal_container{
         flex-flow: column nowrap;
         gap: 0;
@@ -759,6 +757,7 @@ section{
 /*Footer*/
 
 footer{
+    display: flex;
     justify-self: center;
     width: 100%;
 }
@@ -844,6 +843,39 @@ footer{
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+    .mapa_sitio{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+    }
+    
+    .footer_content{
+        gap: 20px;
+    }
+
+    .footer_content h4{
+        font-size: 12px;
+    }
+
+    .footer_menu{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer_social{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
 
 /*Probando medias*/
 
