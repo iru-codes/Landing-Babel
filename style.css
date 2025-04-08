@@ -152,13 +152,7 @@ header{
 }
 
 .menu_toggle {
-    width: 30px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 20;
+    display: none;
 }
 
 .menu_toggle span {
@@ -211,10 +205,17 @@ header{
 
     .menu_toggle {
         display: flex;
-        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 24px;
         cursor: pointer;
         z-index: 20;
-    }
+      }
+      
 
     .menu {
         display: none;
