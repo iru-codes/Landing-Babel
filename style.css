@@ -97,7 +97,6 @@ main{
     display: flex;
     flex-flow: column wrap;
     justify-self: center;
-    align-content: center;
     position: relative;
     max-width: 1200px;
     width: 100%;
@@ -214,6 +213,8 @@ header{
         height: 24px;
         cursor: pointer;
         z-index: 20;
+        background-color: #433D72;
+        padding: 5px;
       }
       
 
@@ -349,6 +350,45 @@ section{
     }
 }
 
+@media (max-width: 450px) {
+    .banner_container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .banner {
+      width: 100%;
+      margin: -20px 0 0 0;
+      align-self: unset;
+    }
+  
+    .banner_content {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      margin-top: 10px;
+    }
+  
+    .banner_content h2 {
+      font-size: 50px;
+      padding-bottom: 5%;
+    }
+  
+    .banner_content p {
+      font-size: 20px;
+      margin: 10px 0;
+      width: 100%;
+    }
+  
+    .banner_content .btn {
+      font-size: 25px;
+      padding: 8px 16px;
+    }
+  }
+  
 .btn{
     text-decoration: none;
     color: #433D72;
