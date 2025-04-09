@@ -447,6 +447,20 @@ section{
     }
 }
 
+@media (max-width: 450px) {
+    .marcas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .fa-brands {
+      font-size: 60px;
+    }
+  }
+
 /*Cards Verticales*/
 
 .servicios {
@@ -554,6 +568,25 @@ section{
         font-size: 20px;
     }
 }
+
+@media (max-width: 450px) {
+    .vertical_card {
+      max-width: 280px;
+    }
+  
+    .vertical_card img {
+      width: calc(100% - 20px);
+    }
+  
+    .vertical_card h2 {
+      font-size: 1.1rem;
+    }
+  
+    .vertical_card p {
+      font-size: 0.95rem;
+    }
+  }
+  
 
 @media screen and (min-width: 1024px) {
     .vertical_card {
