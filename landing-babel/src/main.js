@@ -1,3 +1,5 @@
+import { db } from './firebase-config.js';
+
 const toggleBtn = document.querySelector('.menu_toggle');
 const menu = document.querySelector('.menu');
 

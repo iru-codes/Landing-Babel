@@ -585,9 +585,8 @@ section{
     .vertical_card p {
       font-size: 0.95rem;
     }
-  }
+}
   
-
 @media screen and (min-width: 1024px) {
     .vertical_card {
       margin: 0 16px;
