@@ -77,3 +77,4 @@ contactForm.addEventListener("submit", async (e) => {
 });
 
 console.log("Main.js cargado correctamente");
+console.log("Firestore está conectado:", db);
