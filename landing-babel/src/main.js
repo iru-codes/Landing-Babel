@@ -1,4 +1,5 @@
 import { db } from './firebase-config.js';
+import { collection, addDoc } from "firebase/firestore";
 
 const toggleBtn = document.querySelector('.menu_toggle');
 const menu = document.querySelector('.menu');
@@ -33,29 +34,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Seleccionamos el formulario
-const form = document.querySelector(".contact_form");
+const contactForm = document.querySelector(".contact_form");
+const status = document.getElementById("formStatus");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // evitar recarga
+// Función auxiliar para mostrar mensajes temporales
+function mostrarEstado(mensaje, color = "black", duracion = 5000) {
+  status.textContent = mensaje;
+  status.style.color = color;
 
-  // Capturar valores del formulario
-  const nombre = form.nombre.value;
-  const email = form.email.value;
-  const mensaje = form.mensaje.value;
+  // Limpiar el mensaje después del tiempo indicado
+  setTimeout(() => {
+    status.textContent = "";
+  }, duracion);
+}
+
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const nombre = contactForm.nombre.value.trim();
+  const email = contactForm.email.value.trim();
+  const mensaje = contactForm.mensaje.value.trim();
+
+  // Validación básica
+  if (!nombre || !email || !mensaje) {
+    mostrarEstado("Todos los campos son obligatorios.", "red");
+    return;
+  }
 
   try {
-    await addDoc(collection(db, "mensajes"), {
+    await addDoc(collection(db, "usuarios"), {
       nombre,
       email,
       mensaje,
-      fecha: new Date(),
     });
 
-    alert("Mensaje enviado con éxito 🎉");
-    form.reset(); // Limpiar formulario
+    mostrarEstado("Mensaje enviado con éxito.", "green");
+    contactForm.reset();
   } catch (error) {
     console.error("Error al enviar el mensaje:", error);
-    alert("Hubo un error. Intentalo de nuevo.");
+    mostrarEstado("Hubo un error al enviar el mensaje. Intenta de nuevo.", "red");
   }
 });
 
