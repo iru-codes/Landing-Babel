@@ -31,6 +31,32 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
-  
 
-  
+// Seleccionamos el formulario
+const form = document.querySelector(".contact_form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // evitar recarga
+
+  // Capturar valores del formulario
+  const nombre = form.nombre.value;
+  const email = form.email.value;
+  const mensaje = form.mensaje.value;
+
+  try {
+    await addDoc(collection(db, "mensajes"), {
+      nombre,
+      email,
+      mensaje,
+      fecha: new Date(),
+    });
+
+    alert("Mensaje enviado con éxito 🎉");
+    form.reset(); // Limpiar formulario
+  } catch (error) {
+    console.error("Error al enviar el mensaje:", error);
+    alert("Hubo un error. Intentalo de nuevo.");
+  }
+});
+
+console.log("Main.js cargado correctamente");

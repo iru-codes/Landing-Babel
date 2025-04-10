@@ -1,13 +1,175 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="https://kit.fontawesome.com/fb12fee275.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="icon" type="favicon" sizes="32x32" href="/public/favicon.ico">
+    <link rel="icon" type="favicon" sizes="16x16" href="/public/favicon.ico">
+    <link rel="shortcut icon" href="/public/favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Agencia Babel</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="header_container">
+                <p><img src="/public/img/babel_logo.png" alt="Agencia Babel" class="logo"> Agencia Babel</p>
+
+                <div class="menu_toggle" aria-label="Abrir menú" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="menu">
+                    <ul class="menu_items">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Babel</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="banner">
+            <div class="banner_container">
+                <img class="banner" src="/public/img/portada1.webp" alt="">
+                <div class="banner_content">
+                    <h2>Agencia <br> Babel</h2>
+                    <p>Tu puerta de entrada al mercado digital</p>
+                    <a href="#" class="btn">Contactanos</a>
+                </div>
+            </div>
+       </section>
+       
+
+       <div class="marcas_container">
+           <h3>Estas marcas ya tienen su presencia digital:</h3>
+           <div class="marcas">
+                <i class="fa-brands fa-erlang"></i>
+                <i class="fa-brands fa-d-and-d"></i>
+                <i class="fa-brands fa-battle-net"></i>
+                <i class="fa-brands fa-critical-role"></i>
+                <i class="fa-brands fa-wizards-of-the-coast"></i>
+           </div>
+       </div>
+
+
+       <section class="servicios">
+            <h2>Nuestros servicios</h2>
+            
+            <!-- Swiper Markup -->
+            <div class="swiper insight-carousel">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide vertical_card">
+                      <img src="/public/img/img1.webp" alt="Diseño">
+                      <h2>Branding</h2>
+                      <p>Planes de diseño y estrategia para Identidad de Marca</p>
+                    </div>
+                    <div class="swiper-slide vertical_card">
+                      <img src="/public/img/img2.webp" alt="Diseño">
+                      <h2>Desarrollo Web</h2>
+                      <p>Diseño y Maquetación de páginas web</p>
+                    </div>
+                    <div class="swiper-slide vertical_card">
+                      <img src="/public/img/img3.webp" alt="Gestión">
+                      <h2>Gestión de Redes</h2>
+                      <p>Estrategia y Creación de Contenidos</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>                                                  
+        </section>
+
+        <div class="middle_banner">
+            <img class="banner" src="/public/img/portada2.webp" alt="Banner">
+            <div class="text_container">
+                <h2>¿Querés ser parte del mercado digital?</h2>
+                <p>Tenemos todo lo que tu negocio o tu proyecto necesita: branding, estrategia y gestión de redes sociales.</p>
+                <a href="#" class="btn">Escribinos</a>
+            </div>
+        </div>
+
+
+        <section class="horizontal_cards">
+            <div class="horizontal_container">
+                <div class="horizontal_card">
+                    <img src="/public/img/img4.webp" alt="SEO">
+                    <h3>Auditorías</h3>
+                    <p>También brindamos asesoría de marca para quienes ya tengan algo de su marca o redes.</p>
+                </div>
+                <div class="horizontal_card">
+                    <img src="/public/img/img5.webp" alt="Email marketing">
+                    <h3>Posicionamiento SEO</h3>
+                    <p>Hacemos investigación de palabras clave y redacción especializada para que tu marca sea la primera en las búsquedas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact_container">
+                <div class="contact_text">
+                    <h2>Contacto</h2>
+                    <p>Envíanos un mensaje y nos pondremos en contacto contigo.</p>
+                </div>
+                <form action="#" class="contact_form">
+                    <input class="campo" type="text" name="nombre" placeholder="Nombre">
+                    <input class="campo" type="email" name="email" placeholder="Email">
+                    <textarea class="campo" name="mensaje" placeholder="Mensaje"></textarea>
+                    <input type="submit" value="Enviar" class="form_btn">
+                </form>
+            </div>
+       </section>
+    </main>
+
+    <footer>
+        <div class="footer_content">
+            <div class="mapa_sitio">
+                
+                <div class="redes">
+                    <div class="texto_redes">
+                        <h3>Agencia Babel</h3>
+                        <p>Tu puerta de entrada al mercado digital</p>
+                    </div>
+    
+                    <div class="footer_social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <nav>
+                    <ul class="footer_menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <img class="footer_logo" src="/public/img/babel_logo.png" alt="Agencia Babel">
+                </div>
+            </div>
+
+            <h4> Agencia Babel &copy; 2024-2025</h4>
+        </div>
+    </footer>
     <script type="module" src="/src/main.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
 </html>

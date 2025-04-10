@@ -17,4 +17,5 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
+export { db };
 // Ahora podés usar `db` para interactuar con Firestore
