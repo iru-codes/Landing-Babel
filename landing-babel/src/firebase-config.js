@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAz9Q8MhozTVfyLpon2GLhnDUarAh4cT9Q",
   authDomain: "agencia-babel-bc057.firebaseapp.com",
   projectId: "agencia-babel-bc057",
-  storageBucket: "agencia-babel-bc057.firebasestorage.app",
+  storageBucket: "agencia-babel-bc057.appspot.com",
   messagingSenderId: "676741035339",
   appId: "1:676741035339:web:e178f68351e12ae6e664ce",
   measurementId: "G-V784W6F19F"
